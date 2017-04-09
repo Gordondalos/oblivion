@@ -1,5 +1,5 @@
 /* line 1, base-template.component.sass */
 .content {
-  min-height: calc(100vh - 104px);
+  min-height: calc(100vh - 56px);
   padding-bottom: 150px;
 }

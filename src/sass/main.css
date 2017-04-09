@@ -10327,12 +10327,12 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   }
 }
 
-/* line 1, Project/common.sass */
+/* line 1, Project/_common.sass */
 .pointer {
   cursor: pointer;
 }
 
-/* line 3, Project/common.sass */
+/* line 3, Project/_common.sass */
 .bg-gray-dark {
   background-color: #343434;
 }

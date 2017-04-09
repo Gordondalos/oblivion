@@ -2,27 +2,27 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes, Route } from '@angular/router';
 
 import { NotfoundComponent } from "../NotFoundBundle/notFound.component";
-import { AppComponent } from "../app.component";
+
 import { MainPageComponent } from "../main-page/main-page.component";
+import { DocumentComponent } from "../DocumentBundle/document/document.component";
+import { ExampleComponent } from "../ExampleBundle/example/example.component";
+import { GuideComponent } from "../GuideBundle/guide/guide.component";
+import { AboutComponent } from "../AboutBundle/about/about.component";
 
 const indexRoute : Route = {
     path : '',
     component : MainPageComponent
 };
 
-// const fallbackRoute : Route = {
-//     path : '**',
-//     component : NotfoundComponent
-// };
-
-
 
 const routes: Routes = [
 
     { path: '', redirectTo: '/main', pathMatch: 'full' },
     { path: 'main',  component: MainPageComponent },
-    // { path: 'detail/:id', component: HeroDetailComponent },
-    // { path: 'heroes',     component: HeroesComponent }
+     { path: 'documentation', component: DocumentComponent },
+     { path: 'example',     component: ExampleComponent },
+     { path: 'guide',     component: GuideComponent },
+     { path: 'about',     component: AboutComponent },
      { path: '**',     component: NotfoundComponent },
     indexRoute,
     // fallbackRoute,

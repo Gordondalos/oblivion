@@ -1,0 +1,71 @@
+<content>
+
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3 mt-5">
+        <h3>Компоненты</h3>
+        <ul>
+          <li>Верхнее навигационное меню</li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-9  mt-5">
+
+        <h4>Компонент навигационного меню</h4>
+
+        <div class="alert alert-success" role="alert">
+          <p>Может принимать от родителя кофигурационные данные (смотрите конфиг). Согласно конфигурационным данным
+             выводит компонент навигационного меню, умеет сортировать пункты меню, адаптивен, может выводить dropdown компоненты
+             первого уровня. Также из конфига может заблокировать нужный пункт меню, может скрывать логотип
+             и название на выбор, или вместе. Разумеется что все url и тексты также задаются в конфиге.
+          </p>
+        </div>
+
+        <br>
+
+        <app-oblivion-navbar
+            [importConfig]="configNavbar" >
+        </app-oblivion-navbar>
+
+        <br>
+
+        <div class="alert alert-warning" role="alert">
+          <p class="text-danger">
+            В данном примере показан вместе с компонентом поисковой формы. Поисковая форма это
+            отдельный компонент который вы легко можите найти в нашей библиотеке.
+            В случае если вы не будете ее использовать,
+            обязательно удалите в темплейте компонента код
+            <br>
+            &lt;app-oblivion-search-form&gt;&lt;/app-oblivion-search-form&gt;
+          </p>
+          <p>Также для корректной работы вам нужно указать верный путь до иконки логотипа, если вы ее решили выводить.</p>
+        </div>
+        <p>Полный адрес до компонента "/src/app/ExportComponent/OblivionNavbar/oblivion-navbar"</p>
+
+        <p>
+          Для использования вам нужно скопировать папку с кодом в свой проект, подключить следующие файлы в ваше приложение:
+          <br>
+          <br>
+          <span>/src/app/ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-navbar.component.ts</span>
+          <br>
+          <br>
+          <span>/src/app/ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-sort.pipe.ts</span>
+          <br>
+          <br>
+          и вывести компонент в нужном месте
+        в следующем формате:
+          <br>
+          <br>
+           &lt;app-oblivion-navbar
+              [importConfig]="configNavbar"&gt;
+           &lt;/app-oblivion-navbar&gt;
+        </p>
+
+        Также можно не передовать конфиг, просто переопределить данные в файле config.ts
+
+
+      </div>
+    </div>
+  </div>
+
+</content>

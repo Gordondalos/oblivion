@@ -11,6 +11,14 @@ import { NavbarComponent } from './CommonBundle/navbar/navbar.component';
 import { BaseTemplateComponent } from './CommonBundle/base-template/base-template.component';
 import { FooterComponent } from './CommonBundle/footer/footer.component';
 import { CommonService } from "./CommonBundle/service/common.service";
+import { AboutComponent } from './AboutBundle/about/about.component';
+import { GuideComponent } from './GuideBundle/guide/guide.component';
+import { ExampleComponent } from './ExampleBundle/example/example.component';
+import { DocumentComponent } from './DocumentBundle/document/document.component';
+import { OblivionNavbarComponent } from './ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-navbar.component';
+import { OblivionSearchFormComponent } from './ExportComponent/OblivionSearchForm/oblivion-search-form/oblivion-search-form.component';
+import { OblivionSortPipe } from './ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-sort.pipe';
+
 
 
 
@@ -22,6 +30,14 @@ import { CommonService } from "./CommonBundle/service/common.service";
         NavbarComponent,
         BaseTemplateComponent,
         FooterComponent,
+        AboutComponent,
+        GuideComponent,
+        ExampleComponent,
+        DocumentComponent,
+        OblivionNavbarComponent,
+        OblivionSearchFormComponent,
+        OblivionSortPipe,
+
 
     ],
     imports : [

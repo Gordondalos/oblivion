@@ -1,0 +1,37 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+
+	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<a *ngIf="config.logoShow" class="navbar-brand" href="#">
+		<img src="{{ config.brandIcon }}" width="30" height="30" alt="">
+	</a>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+
+			<li *ngIf="config.brandShow" class="nav-item active">
+				<a class="nav-link" routerLink="{{ config.brandUrl }}">{{ config.brandName }}</a>
+			</li>
+
+			<li *ngFor="let item of config.list |oblivionSort"
+				class="nav-item"
+				[ngClass]="{'dropdown': item.type === 'dropdown'}">
+
+				<div *ngIf="item.type !== 'dropdown'; else elseBlock">
+					<a class="nav-link" [ngClass]="{'disabled': item.disabled}" routerLink="{{ item.url }}">{{ item.text }}</a>
+				</div>
+
+				<ng-template #elseBlock>
+					<a [ngClass]="{'disabled': item.disabled}" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">{{ item.text }}</a>
+					<div class="dropdown-menu">
+						<a *ngFor="let link of item.dropdown" class="dropdown-item" routerLink="{{ 'link.url' }}">{{ link.text }}</a>
+					</div>
+				</ng-template>
+			</li>
+		</ul>
+		<app-oblivion-search-form></app-oblivion-search-form>
+	</div>
+</nav>
+
