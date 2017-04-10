@@ -23,6 +23,16 @@ export class OblivionNavbarComponent implements OnInit {
   config: any = Config;
 
   /**
+   * searchEvent - то метод отрабатывающий в форме поиска, при нажатии на метод submit
+   * @param event
+   * @method searchEvent
+   * @memberOf OblivionNavbarComponent
+   */
+  searchEvent(event){
+    console.log(event);
+  }
+
+  /**
    * метод инициализации, проверяет дали ли нам конфиг от родителя и если дали то устанавливает его
    * @memberOf OblivionNavbarComponent
    * @method ngOnInit

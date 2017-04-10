@@ -7,63 +7,113 @@
 				<h3>Компоненты</h3>
 				<ul>
 					<li>Верхнее навигационное меню</li>
+					<li>Поисковая форма</li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-9  mt-5">
-				<h4>Компонент навигационного меню</h4>
 
-				<p>Может принимать от родителя кофигурационные данные (смотрите конфиг). Согласно конфигурационным данным
-				   выводит компонент навигационного меню, умеет сортировать пункты меню, адаптивен, может выводить dropdown компоненты
-				   первого уровня. Также из конфига может заблокировать нужный пункт меню, может скрывать логотип
-				   и название на выбор, или вместе. Разумеется что все url и тексты также задаются в конфиге.
-				</p>
+				<section class="navbarComponent">
+					<h4>Компонент навигационного меню</h4>
 
-				<div class="clearfix my-4"></div>
+					<p>Может принимать от родителя кофигурационные данные (смотрите конфиг). Согласно конфигурационным данным
+					   выводит компонент навигационного меню, умеет сортировать пункты меню, адаптивен, может выводить dropdown компоненты
+					   первого уровня. Также из конфига может заблокировать нужный пункт меню, может скрывать логотип
+					   и название на выбор, или вместе. Разумеется что все url и тексты также задаются в конфиге.
+					</p>
 
-				<app-oblivion-navbar
-					[importConfig]="configNavbar">
-				</app-oblivion-navbar>
+					<div class="clearfix my-4"></div>
 
-				<div class="clearfix my-4"></div>
+					<app-oblivion-navbar
+						[importConfig]="configNavbar">
+					</app-oblivion-navbar>
 
-				<div class="alert alert-warning" role="alert">
-					<p class="text-danger">
-						В данном примере показан вместе с компонентом поисковой формы. Поисковая форма это
-						отдельный компонент который вы легко можите найти в нашей библиотеке.
-						В случае если вы не будете ее использовать,
-						обязательно удалите в темплейте компонента код
-						<br>
-						&lt;app-oblivion-search-form&gt;&lt;/app-oblivion-search-form&gt;
+					<div class="clearfix my-4"></div>
+
+					<div class="alert alert-warning" role="alert">
+						<p class="text-danger">
+							В данном примере показан вместе с компонентом поисковой формы. Поисковая форма это
+							отдельный компонент который вы легко можите найти в нашей библиотеке.
+							В случае если вы не будете ее использовать,
+							обязательно удалите в темплейте компонента код
+							<br>
+							&lt;app-oblivion-search-form&gt;
+							&lt;/app-oblivion-search-form&gt;
+						</p>
+						<p>
+							Также для корректной работы вам нужно указать верный путь
+							до иконки логотипа, если вы ее решили выводить.
+						</p>
+					</div>
+					<p><b>Полный адрес до компонента :</b> "/src/app/ExportComponent/OblivionNavbar/oblivion-navbar"</p>
+
+					<p>
+						Для использования вам нужно скопировать папку с кодом
+						в свой проект, подключить следующие файлы в ваше приложение:
 					</p>
 					<p>
-						Также для корректной работы вам нужно указать верный путь
-						до иконки логотипа, если вы ее решили выводить.
+						<span>/src/app/ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-navbar.component.ts</span>
 					</p>
-				</div>
-				<p>Полный адрес до компонента "/src/app/ExportComponent/OblivionNavbar/oblivion-navbar"</p>
+					<p>
+						<span>/src/app/ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-sort.pipe.ts</span>
+					</p>
+					<p>
+						и вывести компонент в нужном месте
+						в следующем формате:
+						<br>
+						<br>
+						<iframe width="100%" height="300" src="https://embed.plnkr.co/ZdzJkIQX5wyZqKI6GNUt/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+					</p>
+					<p>
+						Также можно не передовать конфиг, просто переопределить данные в файле config.ts
+					</p>
 
-				<p>
-					Для использования вам нужно скопировать папку с кодом
-					в свой проект, подключить следующие файлы в ваше приложение:
-				</p>
-				<p>
-					<span>/src/app/ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-navbar.component.ts</span>
-				</p>
-				<p>
-					<span>/src/app/ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-sort.pipe.ts</span>
-				</p>
-				<p>
-					и вывести компонент в нужном месте
-					в следующем формате:
-					<br>
-					<br>
-					&lt;app-oblivion-navbar
-					[importConfig]="configNavbar"&gt;
-					&lt;/app-oblivion-navbar&gt;
-				</p>
-				<p>
-					Также можно не передовать конфиг, просто переопределить данные в файле config.ts
-				</p>
+				</section>
+				<hr>
+				<div class="clearfix my-5"></div>
+				<section class="SearhForm">
+					<h4>Компонент поисковая форма</h4>
+
+					<p>
+						Поисковая форма это компонент который принимает в виде конфига плейсхолдер и текст на кнопке.
+						Имеется event searchEvent, который должен реализовавать функцию searchEvent, в качестве параметра
+						метода передается поисковый запрос пользователя.
+					</p>
+					<p>
+						Конфиг не является обязательным полем, его можно опустить, или переопределить
+					</p>
+
+
+
+					<app-oblivion-search-form
+						[importConfig]="{ placeholder: 'Search',  buttonText: 'Search' }"
+						(searchEvent)="searchEvent($event)"
+					></app-oblivion-search-form>
+
+					<div class="clearfix my-4"></div>
+					<p>для вставки компонента используется код:</p>
+					<div class="clearfix my-4"></div>
+					<p>
+						<iframe width="100%" height="300" src="https://embed.plnkr.co/09O616j4HWsZR5MEE0iS/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+					</p>
+
+
+					<p><b>Полный путь до компонента:</b> /src/app/ExportComponent/OblivionSearchForm/oblivion-search-form</p>
+
+
+					<div class="alert alert-warning" role="alert">
+						<p>
+							Также для корректной работы вам нужно реализовать метод
+							searchEvent($event) у родительского компонента.
+						</p>
+					</div>
+				</section>
+				<hr>
+				<div class="clearfix my-5"></div>
+				<section class="oblivionHero">
+					<h4>Компонент Hero</h4>
+
+				</section>
+
 			</div>
 		</div>
 	</div>

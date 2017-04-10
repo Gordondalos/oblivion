@@ -9,6 +9,10 @@ export class ExampleComponent implements OnInit {
 
   constructor() { }
 
+  searchEvent(event){
+    console.log(event);
+  }
+
 
   ngOnInit() {
   }

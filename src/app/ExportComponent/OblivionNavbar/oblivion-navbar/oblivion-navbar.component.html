@@ -31,7 +31,10 @@
 				</ng-template>
 			</li>
 		</ul>
-		<app-oblivion-search-form></app-oblivion-search-form>
+		<app-oblivion-search-form
+			[importConfig]="{ placeholder: 'Search',  buttonText: 'Search' }"
+			(searchEvent)="searchEvent($event)"
+		></app-oblivion-search-form>
 	</div>
 </nav>
 
