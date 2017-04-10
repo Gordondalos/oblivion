@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BaseTemplateComponent } from './base-template.component';
+import { NavbarComponent } from "../navbar/navbar.component";
+import { FooterComponent } from "../footer/footer.component";
 
 describe('BaseTemplateComponent', () => {
   let component: BaseTemplateComponent;
@@ -8,7 +10,7 @@ describe('BaseTemplateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BaseTemplateComponent ]
+      declarations: [ BaseTemplateComponent, NavbarComponent, FooterComponent ]
     })
     .compileComponents();
   }));
