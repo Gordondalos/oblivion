@@ -8,6 +8,7 @@
 				<ul>
 					<li>Верхнее навигационное меню</li>
 					<li>Поисковая форма</li>
+					<li>Слайдер</li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-9  mt-5">
@@ -72,7 +73,6 @@
 				<div class="clearfix my-5"></div>
 				<section class="SearhForm">
 					<h4>Компонент поисковая форма</h4>
-
 					<p>
 						Поисковая форма это компонент который принимает в виде конфига плейсхолдер и текст на кнопке.
 						Имеется event searchEvent, который должен реализовавать функцию searchEvent, в качестве параметра
@@ -81,13 +81,10 @@
 					<p>
 						Конфиг не является обязательным полем, его можно опустить, или переопределить
 					</p>
-
-
-
 					<app-oblivion-search-form
 						[importConfig]="{ placeholder: 'Search',  buttonText: 'Search' }"
-						(searchEvent)="searchEvent($event)"
-					></app-oblivion-search-form>
+						(searchEvent)="searchEvent($event)">
+					</app-oblivion-search-form>
 
 					<div class="clearfix my-4"></div>
 					<p>для вставки компонента используется код:</p>
@@ -110,10 +107,37 @@
 				<hr>
 				<div class="clearfix my-5"></div>
 				<section class="oblivionHero">
-					<h4>Компонент Hero</h4>
+					<h4>Компонент Слайдер</h4>
 
+					<p>
+						Слайдер почти неотемлемая часть любого приложения,
+						Наш слайдер хорош следующими особенностями:
+					</p>
+					<ul>
+						<li>Адаптивен</li>
+						<li>Принимает конфиг в котором можно указать максимальные размеры, формат изображений, и сами слайды</li>
+						<li>Прямо в конфиге можно указать показывать или непоказывать тексты заголовка и лида.</li>
+						<li>Легко установить и использовать</li>
+					</ul>
+
+					<app-oblivion-slider
+						[importConfig]="importConfig">
+					</app-oblivion-slider>
+
+					<div class="clearfix my-4"></div>
+					<p>Для вставки компонента используется код:</p>
+					<p>
+						<iframe width="100%" height="300" src="https://embed.plnkr.co/fOVEkqQ97GL6cS1zzyxk/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+					</p>
+					<p><b>Полный путь до компонента:</b> /src/app/ExportComponent/OblivionSlider/oblivion-slider</p>
+					<p>Для использования вам нужно:</p>
+					<ul>
+						<li>подключить файл /src/app/ExportComponent/OblivionSlider/oblivion-slider/oblivion-slider.component.ts</li>
+						<li>Указать правельные url к вашим фотографиям</li>
+					</ul>
 				</section>
-
+				<hr>
+				<div class="clearfix my-5"></div>
 			</div>
 		</div>
 	</div>

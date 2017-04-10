@@ -18,6 +18,8 @@ import { DocumentComponent } from './DocumentBundle/document/document.component'
 import { OblivionNavbarComponent } from './ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-navbar.component';
 import { OblivionSearchFormComponent } from './ExportComponent/OblivionSearchForm/oblivion-search-form/oblivion-search-form.component';
 import { OblivionSortPipe } from './ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-sort.pipe';
+import { OblivionSliderComponent } from './ExportComponent/OblivionSlider/oblivion-slider/oblivion-slider.component';
+
 
 
 
@@ -37,6 +39,8 @@ import { OblivionSortPipe } from './ExportComponent/OblivionNavbar/oblivion-navb
         OblivionNavbarComponent,
         OblivionSearchFormComponent,
         OblivionSortPipe,
+        OblivionSliderComponent,
+
 
 
     ],
