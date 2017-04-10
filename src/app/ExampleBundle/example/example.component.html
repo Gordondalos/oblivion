@@ -12,6 +12,7 @@
 							<li class="pointer" (click)="scrollToanhor('.SearhForm')">Поисковая форма</li>
 							<li class="pointer" (click)="scrollToanhor('.oblivionHero')">Слайдер</li>
 							<li class="pointer" (click)="scrollToanhor('.oblivionCard')">Карточки</li>
+							<li class="pointer" (click)="scrollToanhor('.oblivionFooter')">Футер</li>
 						</ul>
 					</div>
 
@@ -170,6 +171,28 @@
 				</section>
 				<hr>
 				<div class="clearfix my-5"></div>
+
+				<section class="oblivionFooter">
+					<h4>Компонент Футер</h4>
+
+					<p>Прелесть нашего футера в том что он сразу прибит к низу страницы, имеет конфиг, в общем самая простая заготовка</p>
+
+					<app-oblivion-footer
+						[importConfig]="importConfig" >
+					</app-oblivion-footer>
+
+					<br>
+					<p>Для вставки используйте код ниже</p>
+					<iframe width="100%" height="300" src="https://embed.plnkr.co/4Ddqf8NI7JEblFWn8GXI/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+					<p>
+						Чтобы использовать вам нужно поправить конфиг и подключить файл: <br>
+						/src/app/ExportComponent/OblivionFooter/oblivion-footer/oblivion-footer.component.ts
+					</p>
+
+					<p><b>Полный путь до компонента: /src/app/ExportComponent/OblivionFooter/oblivion-footer </b></p>
+
+				</section>
 			</div>
 		</div>
 	</div>

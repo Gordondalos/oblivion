@@ -10336,3 +10336,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 .bg-gray-dark {
   background-color: #343434;
 }
+
+/* line 5, Project/_common.sass */
+.posr {
+  position: relative;
+}
+
+/* line 7, Project/_common.sass */
+.posf {
+  position: fixed;
+}
