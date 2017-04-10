@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OblivionSearchFormComponent } from './oblivion-search-form.component';
+import { FormsModule } from "@angular/forms";
 
 describe('OblivionSearchFormComponent', () => {
   let component: OblivionSearchFormComponent;
@@ -8,6 +9,9 @@ describe('OblivionSearchFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports : [
+        FormsModule
+      ],
       declarations: [ OblivionSearchFormComponent ]
     })
     .compileComponents();

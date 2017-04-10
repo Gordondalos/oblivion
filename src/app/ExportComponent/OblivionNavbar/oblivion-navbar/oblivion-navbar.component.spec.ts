@@ -4,6 +4,7 @@ import { OblivionNavbarComponent } from './oblivion-navbar.component';
 import { RouterTestingModule } from "@angular/router/testing";
 import { OblivionSortPipe } from "./oblivion-sort.pipe";
 import { OblivionSearchFormComponent } from "../../OblivionSearchForm/oblivion-search-form/oblivion-search-form.component";
+import { FormsModule } from "@angular/forms";
 
 
 describe ( 'OblivionNavbarComponent', () => {
@@ -14,12 +15,15 @@ describe ( 'OblivionNavbarComponent', () => {
 
         TestBed.configureTestingModule ( {
             imports : [
+                FormsModule,
                 RouterTestingModule.withRoutes ( [] )
             ],
             declarations : [
                 OblivionNavbarComponent,
                 OblivionSortPipe,
-                OblivionSearchFormComponent
+                OblivionSearchFormComponent,
+
+
             ]
         } )
             .compileComponents ();
