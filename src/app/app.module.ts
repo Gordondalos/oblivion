@@ -19,6 +19,7 @@ import { OblivionNavbarComponent } from './ExportComponent/OblivionNavbar/oblivi
 import { OblivionSearchFormComponent } from './ExportComponent/OblivionSearchForm/oblivion-search-form/oblivion-search-form.component';
 import { OblivionSortPipe } from './ExportComponent/OblivionNavbar/oblivion-navbar/oblivion-sort.pipe';
 import { OblivionSliderComponent } from './ExportComponent/OblivionSlider/oblivion-slider/oblivion-slider.component';
+import { OblivionCardComponent } from './ExportComponent/OblivionCard/oblivion-card/oblivion-card.component';
 
 
 
@@ -40,6 +41,7 @@ import { OblivionSliderComponent } from './ExportComponent/OblivionSlider/oblivi
         OblivionSearchFormComponent,
         OblivionSortPipe,
         OblivionSliderComponent,
+        OblivionCardComponent,
 
 
 

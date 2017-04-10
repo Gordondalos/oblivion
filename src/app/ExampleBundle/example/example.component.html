@@ -9,6 +9,7 @@
 					<li>Верхнее навигационное меню</li>
 					<li>Поисковая форма</li>
 					<li>Слайдер</li>
+					<li>Карточки</li>
 				</ul>
 			</div>
 			<div class="col-xs-12 col-sm-9  mt-5">
@@ -135,6 +136,30 @@
 						<li>подключить файл /src/app/ExportComponent/OblivionSlider/oblivion-slider/oblivion-slider.component.ts</li>
 						<li>Указать правельные url к вашим фотографиям</li>
 					</ul>
+				</section>
+				<hr>
+				<div class="clearfix my-5"></div>
+				<section class="oblivionCard">
+					<h4>Компонент Карточки</h4>
+
+					<p>
+						Наши карточки хороши адапптивностью бутстрапа, возможностью задать заголовки, тексты, url и название
+						на кнопке прямо в конфиге. Также компонент позволяет отображать или скрывать любую видимую часть
+						карточки через конфигурационные переменные.
+					</p>
+					<app-oblivion-card
+						[importConfig]="importConfig">
+					</app-oblivion-card>
+
+					<p>Для вставки используйте следующий код</p>
+					<iframe width="100%" height="300" src="https://embed.plnkr.co/Bn0ua2DPYV4HI3Qztv3h/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+					Для работы вам нужно подключить вот этот файл:
+					<br>
+					/src/app/ExportComponent/OblivionCard/oblivion-card/oblivion-card.component.ts
+
+					<p><b>Полный путь до компонента:</b> /src/app/ExportComponent/OblivionCard/oblivion-card</p>
+
 				</section>
 				<hr>
 				<div class="clearfix my-5"></div>
