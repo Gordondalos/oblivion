@@ -1,16 +1,23 @@
 <content>
 
 
-	<div class="container-fluid">
+	<div class="container-fluid topPage">
 		<div class="row">
 			<div class="col-xs-12 col-sm-3 mt-5">
-				<h3>Компоненты</h3>
-				<ul>
-					<li>Верхнее навигационное меню</li>
-					<li>Поисковая форма</li>
-					<li>Слайдер</li>
-					<li>Карточки</li>
-				</ul>
+				<div class="posr">
+					<div class="posf">
+						<h3>Компоненты</h3>
+						<ul>
+							<li class="pointer" (click)="scrollToanhor('app-root')">Верхнее навигационное меню</li>
+							<li class="pointer" (click)="scrollToanhor('.SearhForm')">Поисковая форма</li>
+							<li class="pointer" (click)="scrollToanhor('.oblivionHero')">Слайдер</li>
+							<li class="pointer" (click)="scrollToanhor('.oblivionCard')">Карточки</li>
+						</ul>
+					</div>
+
+
+				</div>
+
 			</div>
 			<div class="col-xs-12 col-sm-9  mt-5">
 
