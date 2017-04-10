@@ -17,6 +17,8 @@ export class ExampleComponent implements OnInit {
     scrollToanhor (target) {
         $ ( 'html, body' ).animate ( { scrollTop : $ ( target ).offset ().top }, 800 );
     }
+    importConfig;
+    configNavbar;
 
 
     ngOnInit () {
